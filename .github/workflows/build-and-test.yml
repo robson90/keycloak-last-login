@@ -33,4 +33,4 @@ jobs:
           java-version: '17'
           cache: maven
       - name: Run Tests for Matrix Versions
-        run: mvn -B verify -Dkeycloak.version=${{ matrix.keycloak_version }}
+        run: mvn -B verify failsafe:verify -Dkeycloak.version=${{ matrix.keycloak_version }}
