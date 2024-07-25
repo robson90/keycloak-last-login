@@ -24,7 +24,7 @@
 
         <repository>
           <id>github</id>
-          <name>GitHub Robin Meese Apache Maven Packages</name>
+          <name>GitHub robson90 Apache Maven Packages</name>
           <url>https://maven.pkg.github.com/robson90/keycloak-last-login</url>
         </repository>
       </repositories>
