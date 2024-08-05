@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: de.robinmeese.keycloak.events.LastLoginListenerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.99 s -- in de.robinmeese.keycloak.events.LastLoginListenerTest
