@@ -48,7 +48,7 @@
         <maven.compiler.release>17</maven.compiler.release>
 
         <!-- For compilation -->
-        <version.keycloak>24.0.0</version.keycloak>
+        <version.keycloak>24.0.5</version.keycloak>
         <version.log4j>2.24.0</version.log4j>
         <version.mockito>5.13.0</version.mockito>
         <version.junit>5.11.0</version.junit>
