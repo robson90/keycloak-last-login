@@ -16,8 +16,8 @@ jobs:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '21'
           cache: maven
-      - name: Cache
-        uses: ../.github/workflows/caching.yml
+      - id: Cache
+        uses: robson90/keycloak-last-login/action@latest
       - name: Build project with Maven
         run: mvn -B clean package
   matrix_compatability_test:
@@ -34,7 +34,5 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
           cache: maven
-      - name: Cache
-        uses: ../.github/workflows/caching.yml
       - name: Run Tests for Matrix Versions
         run: mvn -B verify failsafe:verify -Dkeycloak.version=${{ matrix.keycloak_version }}
