@@ -17,7 +17,7 @@ jobs:
           java-version: '21'
           cache: maven
       - name: Cache
-        uses: ./caching.yml
+        uses: ./.github/workflows/caching.yml
       - name: Build project with Maven
         run: mvn -B clean package
   matrix_compatability_test:
@@ -35,6 +35,6 @@ jobs:
           java-version: '21'
           cache: maven
       - name: Cache
-        uses: ./caching.yml
+        uses: ./.github/workflows/caching.yml
       - name: Run Tests for Matrix Versions
         run: mvn -B verify failsafe:verify -Dkeycloak.version=${{ matrix.keycloak_version }}
