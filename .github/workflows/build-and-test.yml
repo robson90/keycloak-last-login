@@ -34,5 +34,7 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
           cache: maven
+      - name: Cache
+        uses: ./.github/workflows/actions/caching
       - name: Run Tests for Matrix Versions
         run: mvn -B verify failsafe:verify -Dkeycloak.version=${{ matrix.keycloak_version }}
