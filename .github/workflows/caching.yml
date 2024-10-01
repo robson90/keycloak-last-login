@@ -6,6 +6,8 @@ jobs:
   caching:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
       - name: Cache Maven packages
         uses: actions/cache@v3
         with:
