@@ -18,4 +18,4 @@ runs:
         path: /tmp/.buildx-cache
         key: ${{ runner.os }}-buildx
         restore-keys: |
-          ${{ runner.os }}-buildx-
+          ${{ runner.os }}-buildx
