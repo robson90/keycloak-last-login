@@ -16,8 +16,8 @@ jobs:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '21'
           cache: maven
-      - id: Cache
-        uses: robson90/keycloak-last-login/action@latest
+      - name: Cache
+        uses: ./.github/workflows/actions/caching
       - name: Build project with Maven
         run: mvn -B clean package
   matrix_compatability_test:
