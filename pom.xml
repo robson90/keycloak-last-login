@@ -53,7 +53,7 @@
     <version.keycloak>25.0.6</version.keycloak>
     <version.log4j>2.24.1</version.log4j>
     <version.mockito>5.14.2</version.mockito>
-    <version.junit>5.11.2</version.junit>
+    <version.junit>5.11.3</version.junit>
     <version.assertj>3.26.3</version.assertj>
     <version.testcontainers>1.20.2</version.testcontainers>
     <version.testcontainers.keycloak>3.5.1</version.testcontainers.keycloak>
