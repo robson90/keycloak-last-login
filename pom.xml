@@ -51,7 +51,7 @@
 
     <!-- For compilation -->
     <version.keycloak>25.0.6</version.keycloak>
-    <version.log4j>2.24.1</version.log4j>
+    <version.log4j>2.24.2</version.log4j>
     <version.mockito>5.14.2</version.mockito>
     <version.junit>5.11.3</version.junit>
     <version.assertj>3.26.3</version.assertj>
