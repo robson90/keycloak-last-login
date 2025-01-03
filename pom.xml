@@ -51,6 +51,7 @@
 
     <!-- For compilation -->
     <version.keycloak>26.0.7</version.keycloak>
+    <version.keycloak.admin.client>26.0.3</version.keycloak.admin.client>
     <version.log4j>2.24.3</version.log4j>
     <version.mockito>5.14.2</version.mockito>
     <version.junit>5.11.3</version.junit>
@@ -238,7 +239,7 @@
     <dependency>
       <groupId>org.keycloak</groupId>
       <artifactId>keycloak-admin-client</artifactId>
-      <version>${version.keycloak}</version>
+      <version>${version.keycloak.admin.client}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
