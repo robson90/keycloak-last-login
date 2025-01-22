@@ -40,7 +40,6 @@ class LastLoginListenerTest {
           .withEnv("KC_SPI_EVENTS_LISTENER_LAST_LOGIN_ATTRIBUTE_NAME", LAST_LOGIN_ATTRIBUTE_KEY)
           .withEnv("KEYCLOAK_ADMIN", "admin")
           .withEnv("KEYCLOAK_ADMIN_PASSWORD", "admin")
-          .withLogConsumer(new Slf4jLogConsumer(LOGGER).withSeparateOutputStreams())
           .withProviderClassesFrom("target/classes")
           .withRealmImportFile("/realm-imports/test-realm-realm.json");
 

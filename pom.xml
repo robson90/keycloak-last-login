@@ -50,7 +50,7 @@
     <maven.compiler.release>21</maven.compiler.release>
 
     <!-- For compilation -->
-    <version.keycloak>26.0.7</version.keycloak>
+    <version.keycloak>26.0.8</version.keycloak>
     <version.keycloak.admin.client>26.0.3</version.keycloak.admin.client>
     <version.log4j>2.24.3</version.log4j>
     <version.mockito>5.15.2</version.mockito>
@@ -182,6 +182,12 @@
       <artifactId>keycloak-services</artifactId>
       <version>${version.keycloak}</version>
       <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.jboss.slf4j</groupId>
+          <artifactId>slf4j-jboss-logmanager</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <!-- ######### TESTING ######### -->
     <dependency>
