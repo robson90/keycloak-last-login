@@ -51,7 +51,7 @@
 
     <!-- For compilation -->
     <version.keycloak>26.0.7</version.keycloak>
-    <version.keycloak.admin.client>26.0.3</version.keycloak.admin.client>
+    <version.keycloak.admin.client>26.0.4</version.keycloak.admin.client>
     <version.log4j>2.24.3</version.log4j>
     <version.mockito>5.15.2</version.mockito>
     <version.junit>5.11.4</version.junit>
