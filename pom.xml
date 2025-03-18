@@ -4,7 +4,7 @@
 
   <groupId>de.robinmeese.keycloak</groupId>
   <artifactId>keycloak-last-login</artifactId>
-  <version>26.1.0-SNAPSHOT</version>
+  <version>26.1.4</version>
 
   <name>last-login</name>
   <description>This Plugin extends Keycloak´s functionality, to an attribute that is saved on Userlevel, when user last
@@ -35,7 +35,7 @@
     <developerConnection>scm:git:https://github.com/robson90/keycloak-last-login.git
     </developerConnection>
     <url>https://github.com/robson90/keycloak-last-login.git</url>
-    <tag>HEAD</tag>
+    <tag>v26.1.4</tag>
   </scm>
 
   <issueManagement>
