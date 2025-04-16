@@ -41,7 +41,7 @@ class LastLoginListenerTest {
           .withEnv("KEYCLOAK_ADMIN", "admin")
           .withEnv("KEYCLOAK_ADMIN_PASSWORD", "admin")
           .withProviderClassesFrom("target/classes")
-          .withRealmImportFile("/realm-imports/test-realm-realm.json");
+          .withRealmImportFile("/realm-imports/test-realm-realm123.json");
 
   @BeforeEach
   public void setUp() {
