@@ -59,7 +59,7 @@
     <version.testcontainers>1.21.1</version.testcontainers>
     <version.testcontainers.keycloak>3.7.0</version.testcontainers.keycloak>
     <version.restassured>5.5.5</version.restassured>
-    <version.maven.model>3.9.9</version.maven.model>
+    <version.maven.model>3.9.10</version.maven.model>
   </properties>
 
   <build>
