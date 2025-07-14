@@ -57,7 +57,7 @@
     <version.junit>5.13.3</version.junit>
     <version.assertj>3.27.3</version.assertj>
     <version.testcontainers>1.21.3</version.testcontainers>
-    <version.testcontainers.keycloak>3.7.0</version.testcontainers.keycloak>
+    <version.testcontainers.keycloak>3.8.0</version.testcontainers.keycloak>
     <version.restassured>5.5.5</version.restassured>
     <version.maven.model>3.9.10</version.maven.model>
   </properties>
