@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.representations.idm.UserRepresentation;
+import org.keycloak.representations.userprofile.config.UPConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testcontainers.containers.output.Slf4jLogConsumer;
@@ -46,6 +47,10 @@ class LastLoginListenerTest {
   @BeforeEach
   public void setUp() {
     admin = keycloak.getKeycloakAdminClient();
+    var realm = admin.realm(REALM_NAME);
+    var upconfig = realm.users().userProfile().getConfiguration();
+    upconfig.setUnmanagedAttributePolicy(UPConfig.UnmanagedAttributePolicy.ENABLED);
+    realm.users().userProfile().update(upconfig);
   }
 
   @Test
