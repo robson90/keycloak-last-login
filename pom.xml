@@ -50,7 +50,7 @@
     <maven.compiler.release>21</maven.compiler.release>
 
     <!-- For compilation -->
-    <version.keycloak>26.3.2</version.keycloak>
+    <version.keycloak>26.3.4</version.keycloak>
     <version.keycloak.admin.client>26.0.6</version.keycloak.admin.client>
     <version.log4j>2.25.1</version.log4j>
     <version.mockito>5.19.0</version.mockito>
