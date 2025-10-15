@@ -25,7 +25,7 @@ jobs:
     needs: build_and_test
     strategy:
       matrix:
-        keycloak_version: [ 25.0.6, 26.0.8, 26.1.4, 26.2.3, 26.3.1, latest ]
+        keycloak_version: [ 25.0.6, 26.0.8, 26.1.4, 26.2.3, 26.3.5, latest ]
     steps:
       - uses: actions/checkout@v5
       - name: Set up JDK 21
