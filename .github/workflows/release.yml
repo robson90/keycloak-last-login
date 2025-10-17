@@ -40,7 +40,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: "target/keycloak-last-login.jar"
-          body_path: "RELEASELOG.md"
+          #body_path: "RELEASELOG.md"
           fail_on_unmatched_files: true
           tag_name: v${{ github.event.inputs.releaseVersion }}
           generate_release_notes: true
