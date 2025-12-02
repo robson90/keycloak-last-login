@@ -20,7 +20,9 @@ updates:
       prefix: "chore"
 
   - package-ecosystem: "github-actions"
-    directory: "/"
+    directories:
+      - "/"
+      - ".github/workflows/actions/caching"
     schedule:
       interval: "weekly"
       day: "monday"
