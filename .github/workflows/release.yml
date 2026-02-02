@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - name: Configure Git User
         run: |
           git config user.email "actions@github.com"
@@ -30,22 +32,28 @@ jobs:
           distribution: 'temurin'
           java-version: 21
           cache: 'maven'
-      - name: Release to GitHub packages
-        run: |
-          mvn -B clean release:prepare release:perform -s maven-github-settings.xml --file pom.xml -DpushChanges=false -DlocalCheckout=true -DreleaseVersion=${{ github.event.inputs.releaseVersion }} -DdevelopmentVersion=${{ github.event.inputs.developmentVersion }}
-          git push origin v${{ github.event.inputs.releaseVersion }}
+          server-id: github
+      - name: Set Release Version
+        run: mvn versions:set -DnewVersion=${{ github.event.inputs.releaseVersion }} -DgenerateBackupPoms=false
+      - name: Build & Publish to GitHub Packages
+        run: mvn clean deploy -DskipTests -s $GITHUB_ASSETS/settings.xml
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: Release to GitHub releases
         uses: softprops/action-gh-release@v2
         with:
-          files: "target/keycloak-last-login.jar"
-          #body_path: "RELEASELOG.md"
+          files: "target/*.jar"
           fail_on_unmatched_files: true
           tag_name: v${{ github.event.inputs.releaseVersion }}
           generate_release_notes: true
+          target_commitish: main
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Prepare Next Version
+        run: |
+          mvn versions:set -DnewVersion=${{ github.event.inputs.nextVersion }} -DgenerateBackupPoms=false
+          git add pom.xml
+          git commit -m "chore(release): prepare for next development iteration [skip ci]"
       - name: Create Pull Request
         id: create-pr
         uses: peter-evans/create-pull-request@v8
