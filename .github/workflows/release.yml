@@ -36,7 +36,7 @@ jobs:
       - name: Set Release Version
         run: mvn versions:set -DnewVersion=${{ github.event.inputs.releaseVersion }} -DgenerateBackupPoms=false
       - name: Build & Publish to GitHub Packages
-        run: mvn clean deploy -DskipTests -s $GITHUB_ASSETS/settings.xml
+        run: mvn clean deploy -DskipTests -s maven-github-settings.xml
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: Release to GitHub releases
